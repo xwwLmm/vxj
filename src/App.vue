@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Loading :showMask="false"></Loading>
+    <Loading :showMask="true"></Loading>
   </div>
 </template>
 

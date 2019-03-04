@@ -68,7 +68,7 @@
         margin 0 auto
         width 16%
         height 16%
-        background-color #fff
+        background-color $light-color
         border-radius 100%
         animation loading-circleBounceDelay 1.2s infinite ease-in-out both
 
