@@ -1,13 +1,15 @@
 {
-  "name": "xj",
+  "name": "vxj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vxj --dest lib src/index.js"
   },
   "dependencies": {
+    "stylus-loader": "^3.0.2",
     "vue": "^2.6.6"
   },
   "devDependencies": {
