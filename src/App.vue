@@ -1,20 +1,36 @@
 <template>
   <div id="app">
-    <Loading :showMask="true"></Loading>
+    <div :class="$style.btns">
+      <span @click="showLoading = true"> loading </span>
+      <span @click="showAlert = true"> alert </span>
+    </div>
+    <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
+    <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
   </div>
 </template>
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data() {
+    return {
+      showLoading: false,
+      showAlert: false
+    }
+  }
 }
 </script>
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" module>
+  #app
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color #2c3e50
+
+
+  .btns
+
+    > span
+      margin-right 10px
+      padding: 10px
+
 </style>
