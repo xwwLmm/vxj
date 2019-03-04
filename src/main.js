@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import Components from '../dist/index.js'
-console.log(Components)
-Vue.use(Components.Loading)
+import Loading from './packages/loading'
+Vue.use(Loading)
 
 Vue.config.productionTip = false
 

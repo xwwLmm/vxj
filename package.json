@@ -1,7 +1,8 @@
 {
   "name": "vxj",
   "version": "0.1.0",
-  "private": true,
+  "main": "lib/vxj.umd.js",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,6 +10,7 @@
     "lib": "vue-cli-service build --target lib --name vxj --dest lib src/index.js"
   },
   "dependencies": {
+    "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.6"
   },
