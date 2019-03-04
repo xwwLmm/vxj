@@ -3,9 +3,11 @@
     <div :class="$style.btns">
       <span @click="showLoading = true"> loading </span>
       <span @click="showAlert = true"> alert </span>
+      <span @click="showToast = true"> toast </span>
     </div>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
+    <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
   </div>
 </template>
 <script>
@@ -14,7 +16,8 @@ export default {
   data() {
     return {
       showLoading: false,
-      showAlert: false
+      showAlert: false,
+      showToast: false
     }
   }
 }
