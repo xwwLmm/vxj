@@ -6,7 +6,7 @@
       <span @click="showToast = true"> toast </span>
       <span @click="showConfirm = true"> confirm </span>
       <span>
-        <XSwitch :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
+        <XSwitch :disabled="true" :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
       </span>
     </div>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>

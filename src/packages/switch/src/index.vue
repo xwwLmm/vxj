@@ -1,5 +1,5 @@
 <template>
-  <span :class="[$style.container, active ? $style.active : '']" :style="style" @click="$emit('toggle')">
+  <span :class="[$style.container, active ? $style.active : '', disabled ? $style.disabled : '']" :style="style" @click="!disabled && $emit('toggle')">
   </span>
 </template>
 <script>
@@ -10,7 +10,8 @@
         type: Number,
         default: 40
       },
-      active: Boolean
+      active: Boolean,
+      disabled: Boolean
     },
     computed: {
       style() {
@@ -55,5 +56,9 @@
     &::after
       left 100%
       margin-left -17px
+
+
+  .disabled
+    cursor not-allowed
 
 </style>
