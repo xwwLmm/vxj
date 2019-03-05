@@ -5,10 +5,14 @@
       <span @click="showAlert = true"> alert </span>
       <span @click="showToast = true"> toast </span>
       <span @click="showConfirm = true"> confirm </span>
-      <span>
+
+    </div>
+    <div>
+      <span style="margin-left: 10px">
         <XSwitch :disabled="true" :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
       </span>
     </div>
+    <XCell @onClick="clickCell" title="111">222</XCell>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
@@ -28,10 +32,22 @@ export default {
       showConfirm: false,
       switchActive: false
     }
+  },
+  methods: {
+    clickCell() {
+      // eslint-disable-next-line
+      console.log('xxx')
+    }
   }
 }
 </script>
 <style lang="stylus" module>
+  *
+    margin 0
+
+  body
+    background #f8f8f8
+
   #app
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
