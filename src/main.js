@@ -7,6 +7,7 @@ import Toast from './packages/toast'
 import Confirm from './packages/confirm'
 import Switch from './packages/switch'
 import Cell from './packages/cell'
+import Tab from './packages/tab'
 
 Vue.use(Loading)
 Vue.use(Alert)
@@ -14,6 +15,7 @@ Vue.use(Toast)
 Vue.use(Confirm)
 Vue.use(Switch)
 Vue.use(Cell)
+Vue.use(Tab)
 
 Vue.config.productionTip = false
 

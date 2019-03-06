@@ -13,6 +13,9 @@
       </span>
     </div>
     <XCell @onClick="clickCell" title="111">222</XCell>
+    <div style="margin-top: 10px">
+      <XTab :items="items" @toggle="toggleTab"></XTab>
+    </div>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
@@ -30,13 +33,18 @@ export default {
       showAlert: false,
       showToast: false,
       showConfirm: false,
-      switchActive: false
+      switchActive: false,
+      items: '测试看看嫩嗯嗯嗯嗯呢'.split('').map(v => v)
     }
   },
   methods: {
     clickCell() {
       // eslint-disable-next-line
       console.log('xxx')
+    },
+    toggleTab() {
+      // eslint-disable-next-line
+      console.log(arguments)
     }
   }
 }
