@@ -16,6 +16,9 @@
     <div style="margin-top: 10px">
       <XTab :items="items" @toggle="toggleTab"></XTab>
     </div>
+    <div style="margin-top: 10px">
+      <XCarousel :images="images"></XCarousel>
+    </div>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
@@ -34,7 +37,8 @@ export default {
       showToast: false,
       showConfirm: false,
       switchActive: false,
-      items: '测试看看嫩嗯嗯嗯嗯呢'.split('').map(v => v)
+      items: '测试看看嫩嗯嗯嗯嗯呢'.split('').map(v => v),
+      images: new Array(5).fill(0).map((v, i) => `http://lorempixel.com/400/${200 - i}/`)
     }
   },
   methods: {

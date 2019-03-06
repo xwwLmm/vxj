@@ -64,6 +64,7 @@
     background-color $light-color
     box-shadow $box-shadow
     -webkit-overflow-scrolling touch
+    scroll-behavior smooth
 
     &::-webkit-scrollbar
       width 0

@@ -8,6 +8,7 @@ import Confirm from './packages/confirm'
 import Switch from './packages/switch'
 import Cell from './packages/cell'
 import Tab from './packages/tab'
+import Carousel from './packages/carousel'
 
 Vue.use(Loading)
 Vue.use(Alert)
@@ -16,6 +17,7 @@ Vue.use(Confirm)
 Vue.use(Switch)
 Vue.use(Cell)
 Vue.use(Tab)
+Vue.use(Carousel)
 
 Vue.config.productionTip = false
 
