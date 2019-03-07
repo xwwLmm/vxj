@@ -26,15 +26,17 @@
       </XSearch>
     </div>
 
-    <div>
-      <XDateRangePicker mode="single"></XDateRangePicker>
+    <div :class="$style.btns">
+      <span @click="showDateRange = true"> date range pick </span>
     </div>
+
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
     <Confirm @close="showConfirm = false"
              @confirm="showConfirm = false"
              text="你确定要这样做吗？" v-if="showConfirm"></Confirm>
+    <XDateRangePicker @close="showDateRange = false" mode="single" v-if="showDateRange"></XDateRangePicker>
   </div>
 </template>
 <script>
@@ -48,7 +50,8 @@ export default {
       showConfirm: false,
       switchActive: false,
       items: '测试看看嫩嗯嗯嗯嗯呢'.split('').map(v => v),
-      images: new Array(5).fill(0).map((v, i) => `http://lorempixel.com/400/${200 - i}/`)
+      images: new Array(5).fill(0).map((v, i) => `http://lorempixel.com/400/${200 - i}/`),
+      showDateRange: false
     }
   },
   methods: {
