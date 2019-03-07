@@ -9,6 +9,7 @@ import Switch from './packages/switch'
 import Cell from './packages/cell'
 import Tab from './packages/tab'
 import Carousel from './packages/carousel'
+import Search from './packages/search'
 
 Vue.use(Loading)
 Vue.use(Alert)
@@ -18,6 +19,7 @@ Vue.use(Switch)
 Vue.use(Cell)
 Vue.use(Tab)
 Vue.use(Carousel)
+Vue.use(Search)
 
 Vue.config.productionTip = false
 

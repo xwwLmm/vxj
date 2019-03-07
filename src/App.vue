@@ -5,11 +5,10 @@
       <span @click="showAlert = true"> alert </span>
       <span @click="showToast = true"> toast </span>
       <span @click="showConfirm = true"> confirm </span>
-
     </div>
     <div>
       <span style="margin-left: 10px">
-        <XSwitch :disabled="true" :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
+        <XSwitch :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
       </span>
     </div>
     <XCell @onClick="clickCell" title="111">222</XCell>
@@ -18,6 +17,13 @@
     </div>
     <div style="margin-top: 10px">
       <XCarousel :images="images"></XCarousel>
+    </div>
+
+    <div style="margin-top: 10px">
+      <XSearch @search="search">
+        <span style="padding-left: 10px;line-height: 30px;" slot="left">1111</span>
+        <span style="padding-left: 10px;line-height: 30px;" slot="right">222</span>
+      </XSearch>
     </div>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
@@ -49,6 +55,10 @@ export default {
     toggleTab() {
       // eslint-disable-next-line
       console.log(arguments)
+    },
+    search(searchText) {
+      // eslint-disable-next-line
+      console.log(searchText)
     }
   }
 }
