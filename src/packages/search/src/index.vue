@@ -6,7 +6,7 @@
     <div :class="$style.content">
       <div>
         <img :src="require('./assets/搜索.svg')">
-        <input v-model="searchText" :placeholder="placeholder" @focus="focus = true"/>
+        <input v-model="searchText" type="search" :placeholder="placeholder" @focus="focus = true"/>
         <span @click="$emit('search', searchText)" v-if="focus">搜索</span>
       </div>
       <div v-if="focus" @click="focus = false">取消</div>
