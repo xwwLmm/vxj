@@ -7,6 +7,7 @@ import Cell from './packages/cell/src'
 import Tab from './packages/tab/src'
 import Carousel from './packages/carousel/src'
 import Search from './packages/search/src'
+import DateRangePicker from './packages/dateRangePicker/src'
 
 const version = '0.1.1'
 
@@ -20,6 +21,7 @@ const install = function (Vue) {
   Vue.component(Tab.name, Tab)
   Vue.component(Carousel.name, Carousel)
   Vue.component(Search.name, Search)
+  Vue.component(DateRangePicker.name, DateRangePicker)
 }
 
 export default {
@@ -33,5 +35,6 @@ export default {
   Cell,
   Tab,
   Carousel,
-  Search
+  Search,
+  DateRangePicker
 }

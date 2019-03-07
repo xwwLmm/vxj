@@ -25,6 +25,10 @@
         <span style="padding-left: 10px;line-height: 30px;" slot="right">222</span>
       </XSearch>
     </div>
+
+    <div>
+      <XDateRangePicker mode="single"></XDateRangePicker>
+    </div>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
