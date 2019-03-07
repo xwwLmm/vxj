@@ -13,25 +13,25 @@
 
       <div :class="$style.header">
         <div :class="$style.arrow">
-          <span :class="$style.arrowAvailable" @click.stop="minusYear"><</span>
+          <span :class="$style.arrowAvailable" @click.stop="minusYear"> &lt; </span>
           <span>{{year}}年</span>
-          <span :class="$style.arrowAvailable" @click.stop="addYear">></span>
+          <span :class="$style.arrowAvailable" @click.stop="addYear"> &gt; </span>
         </div>
         <div :class="$style.arrow">
-          <span :class="$style.arrowAvailable" @click.stop="minusMonth"><</span>
+          <span :class="$style.arrowAvailable" @click.stop="minusMonth"> &lt; </span>
           <span>{{month}}月</span>
-          <span :class="$style.arrowAvailable" @click.stop="addMonth">></span>
+          <span :class="$style.arrowAvailable" @click.stop="addMonth"> &gt; </span>
         </div>
       </div>
 
       <div :class="$style.weekText">
-        <span v-for="text in weekText">{{text}}</span>
+        <span v-for="text in weekText" :key="text">{{text}}</span>
       </div>
 
       <div :class="$style.days">
-        <div v-for="left in monthLeft">&nbsp;</div>
+        <div v-for="left in monthLeft" :key="year + '-' + month + '-' + left">&nbsp;</div>
         <div :class="[day.checked && (day.moment === startTime || day.moment === endTime) ? $style.terminal : '']"
-             v-for="day, index in days" :key="day.moment">
+             v-for="day in days" :key="day.moment">
           <span :class="day.available ? '' : $style.unavailable"
                 :style="{backgroundColor: day.checked ? ((day.moment === startTime || day.moment === endTime) ? weightColor : lightColor) : ''}"
                 @click.stop="toggleCheck(day)">
