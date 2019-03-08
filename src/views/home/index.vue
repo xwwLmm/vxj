@@ -9,8 +9,16 @@
 
     <XCell @onClick="$router.push('/tab')">tab</XCell>
 
+    <Header>Picker</Header>
+
+    <XCell @onClick="$router.push('/date-range-picker')">dateRangePicker</XCell>
+
     <Header>Form</Header>
     <XCell @onClick="$router.push('/switch')">switch</XCell>
+    <XCell @onClick="$router.push('/search')">search</XCell>
+
+    <Header>Others</Header>
+    <XCell @onClick="$router.push('/carousel')">carousel</XCell>
   </div>
 </template>
 <script>

@@ -19,6 +19,15 @@ const router = new VueRouter({
   }, {
     path: '/tab',
     component: () => import('../views/tab')
+  }, {
+    path: '/search',
+    component: () => import('../views/search')
+  }, {
+    path: '/carousel',
+    component: () => import('../views/carousel')
+  }, {
+    path: '/date-range-picker',
+    component: () => import('../views/dateRangePicker')
   }]
 })
 

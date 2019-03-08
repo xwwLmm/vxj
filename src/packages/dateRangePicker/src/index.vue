@@ -252,6 +252,7 @@
     left 0
     opacity .5
     background-color rgb(0, 0, 0)
+    z-index 100
 
   .container
     position fixed
