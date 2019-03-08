@@ -1,20 +1,6 @@
 <template>
   <div id="app">
-    <div :class="$style.btns">
-      <span @click="showLoading = true"> loading </span>
-      <span @click="showAlert = true"> alert </span>
-      <span @click="showToast = true"> toast </span>
-      <span @click="showConfirm = true"> confirm </span>
-    </div>
-    <div>
-      <span style="margin-left: 10px">
-        <XSwitch :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
-      </span>
-    </div>
-    <XCell @onClick="clickCell" title="111">222</XCell>
-    <div style="margin-top: 10px">
-      <XTab :items="items" @toggle="toggleTab"></XTab>
-    </div>
+
     <div style="margin-top: 10px">
       <XCarousel :images="images"></XCarousel>
     </div>
@@ -30,13 +16,9 @@
       <span @click="showDateRange = true"> date range pick </span>
     </div>
 
-    <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
-    <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
-    <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
-    <Confirm @close="showConfirm = false"
-             @confirm="showConfirm = false"
-             text="你确定要这样做吗？" v-if="showConfirm"></Confirm>
+
     <XDateRangePicker @close="showDateRange = false" mode="single" v-if="showDateRange"></XDateRangePicker>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -49,20 +31,11 @@ export default {
       showToast: false,
       showConfirm: false,
       switchActive: false,
-      items: '测试看看嫩嗯嗯嗯嗯呢'.split('').map(v => v),
       images: new Array(5).fill(0).map((v, i) => `http://lorempixel.com/400/${200 - i}/`),
       showDateRange: false
     }
   },
   methods: {
-    clickCell() {
-      // eslint-disable-next-line
-      console.log('xxx')
-    },
-    toggleTab() {
-      // eslint-disable-next-line
-      console.log(arguments)
-    },
     search(searchText) {
       // eslint-disable-next-line
       console.log(searchText)
