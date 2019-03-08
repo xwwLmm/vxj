@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>tab</Header>
+    <Header :back="true">tab</Header>
     <div style="margin-top: 10px">
       <XTab :items="items" @toggle="toggleTab"></XTab>
     </div>

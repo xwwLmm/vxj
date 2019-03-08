@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <span :class="$style.back" v-if="back">&lt;</span>
+    <span :class="$style.back" v-if="back" @click="$router.go(-1)">&lt;</span>
     <slot></slot>
   </div>
 </template>

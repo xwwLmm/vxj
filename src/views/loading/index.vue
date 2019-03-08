@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>loading</Header>
+    <Header :back="true">loading</Header>
     <div :class="$style.btns">
       <span @click="showLoading = true"> loading </span>
     </div>

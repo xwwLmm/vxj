@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>dateRangePicker</Header>
+    <Header :back="true">dateRangePicker</Header>
     <div :class="$style.btns">
       <span @click="showDateRange = true"> date range pick </span>
     </div>
@@ -16,3 +16,11 @@
     }
   }
 </script>
+<style lang="stylus" module>
+  .btns
+
+    > span
+      display inline-block
+      margin-right 10px
+      padding 10px
+</style>

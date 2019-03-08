@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>tips</Header>
+    <Header :back="true">tips</Header>
     <div :class="$style.btns">
       <span @click="showAlert = true"> alert </span>
       <span @click="showToast = true"> toast </span>

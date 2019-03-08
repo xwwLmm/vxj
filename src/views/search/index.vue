@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>search</Header>
+    <Header :back="true">search</Header>
     <div style="margin-top: 10px">
       <XSearch @search="search">
         <span style="padding-left: 10px;line-height: 30px;" slot="left">left</span>

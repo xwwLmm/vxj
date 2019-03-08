@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>switch</Header>
+    <Header :back="true">switch</Header>
     <div>
       <span style="margin-left: 10px">
         <XSwitch :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>

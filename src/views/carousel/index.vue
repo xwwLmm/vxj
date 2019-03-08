@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header>carousel</Header>
+    <Header :back="true">carousel</Header>
     <div style="margin-top: 10px">
       <XCarousel :images="images"></XCarousel>
     </div>
