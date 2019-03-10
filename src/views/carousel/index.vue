@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :back="true">carousel</Header>
-    <div style="margin-top: 10px">
+    <div style="margin-top: 50px">
       <XCarousel :images="images"></XCarousel>
     </div>
   </div>

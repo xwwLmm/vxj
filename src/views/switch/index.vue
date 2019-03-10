@@ -1,11 +1,11 @@
 <template>
   <div>
     <Header :back="true">switch</Header>
-    <div>
-      <span style="margin-left: 10px">
-        <XSwitch :active="switchActive" @toggle="switchActive = !switchActive"></XSwitch>
-      </span>
-    </div>
+
+    <XCell style="margin-top: 50px">
+      <span>switch</span>
+      <XSwitch style="margin-right: 15px" :active="switchActive" @toggle="switchActive = !switchActive" slot="right"></XSwitch>
+    </XCell>
   </div>
 </template>
 <script>

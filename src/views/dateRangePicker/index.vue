@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header :back="true">dateRangePicker</Header>
-    <div :class="$style.btns">
-      <span @click="showDateRange = true"> date range pick </span>
-    </div>
+    <Buttons>
+      <Button @onClick="showDateRange = true">点击弹出 date range picker</Button>
+    </Buttons>
     <XDateRangePicker @close="showDateRange = false" mode="single" v-if="showDateRange"></XDateRangePicker>
   </div>
 </template>

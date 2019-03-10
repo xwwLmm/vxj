@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header :back="true">loading</Header>
-    <div :class="$style.btns">
-      <span @click="showLoading = true"> loading </span>
-    </div>
+    <Buttons>
+      <Button @onClick="showLoading = true">点击展示 loading</Button>
+    </Buttons>
     <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
   </div>
 </template>

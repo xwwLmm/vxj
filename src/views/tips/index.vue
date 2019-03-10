@@ -1,11 +1,12 @@
 <template>
   <div>
     <Header :back="true">tips</Header>
-    <div :class="$style.btns">
-      <span @click="showAlert = true"> alert </span>
-      <span @click="showToast = true"> toast </span>
-      <span @click="showConfirm = true"> confirm </span>
-    </div>
+    <Buttons>
+      <Button @onClick="showAlert = true">点击弹出 alert</Button>
+      <Button @onClick="showToast = true">点击弹出 toast</Button>
+      <Button @onClick="showConfirm = true">点击弹出 confirm</Button>
+    </Buttons>
+
     <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
     <Confirm @close="showConfirm = false"
@@ -24,11 +25,3 @@
     }
   }
 </script>
-<style lang="stylus" module>
-  .btns
-
-    > span
-      display inline-block
-      margin-right 10px
-      padding 10px
-</style>

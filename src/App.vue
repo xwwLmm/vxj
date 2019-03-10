@@ -11,6 +11,7 @@ export default {
 <style lang="stylus" module>
   *
     margin 0
+    box-sizing border-box
 
   body
     background #f8f8f8

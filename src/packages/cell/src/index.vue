@@ -5,9 +5,8 @@
         <slot name="default"></slot>
       </div>
       <div v-else>{{title}}</div>
-      <div v-if="$slots.right">
-        <slot name="right"></slot>
-      </div>
+      <slot name="right" v-if="$slots.right">
+      </slot>
       <div :class="$style.right" v-else>
       </div>
     </div>
