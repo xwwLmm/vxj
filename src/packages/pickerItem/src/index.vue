@@ -92,6 +92,14 @@
         }
       }
     },
+    watch: {
+      defaultIndex(index) {
+        this.currentIndex = index
+      },
+      minIndex(index) {
+        this.currentIndex = index
+      }
+    },
     methods: {
       isObject(val) {
         return isObject(val)
