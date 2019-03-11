@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name vxj --dest lib src/index.js"
   },
+  "files": ["lib", "src/packages"],
   "dependencies": {
     "moment": "^2.24.0",
     "stylus": "^0.54.5",
