@@ -10,6 +10,7 @@ import Search from './packages/search/src'
 import DateRangePicker from './packages/dateRangePicker/src'
 import PickerItem from './packages/pickerItem/src'
 import DatePicker from './packages/datePicker/src'
+import RegionPicker from './packages/regionPicker/src'
 
 const version = '0.1.1'
 
@@ -26,6 +27,7 @@ const install = function (Vue) {
   Vue.component(DateRangePicker.name, DateRangePicker)
   Vue.component(PickerItem.name, PickerItem)
   Vue.component(DatePicker.name, DatePicker)
+  Vue.component(RegionPicker.name, RegionPicker)
 }
 
 export default {
@@ -42,5 +44,6 @@ export default {
   Search,
   DateRangePicker,
   PickerItem,
-  DatePicker
+  DatePicker,
+  RegionPicker
 }

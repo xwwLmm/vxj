@@ -1,9 +1,9 @@
 <template>
-  <div :class="$style.container" :style="{height: contentHeight + 'px'}">
+  <div :class="$style.container" @touchmove.prevent :style="{height: contentHeight + 'px'}">
     <ul :style="activeTop" @touchstart="handleTouchStart"
         @touchmove="handleTouchMove"
         @touchend="handleTouchEnd">
-      <li @click.prevent.stop="handleLetterClick(index)"
+      <li @click.prevent="handleLetterClick(index)"
           v-for="(value, index) in values"
           :class="currentIndex === index ? $style.active : ''"
           :style="itemStyle" :key="index * 2">{{isObject(value) ? value[textKey] : value}}</li>
@@ -29,15 +29,15 @@
         required: true,
         validator: function (val) {
           return val.length > 0
-        },
-        textKey: {
-          type: String,
-          default: 'text'
-        },
-        valueKey: {
-          type: String,
-          default: 'value'
         }
+      },
+      textKey: {
+        type: String,
+        default: 'text'
+      },
+      valueKey: {
+        type: String,
+        default: 'value'
       },
       itemHeight: {
         type: Number,
@@ -149,6 +149,9 @@
       cursor pointer
       color $grey-color
       outline none
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
 
   .border
     position absolute
