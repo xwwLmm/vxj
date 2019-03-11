@@ -6,7 +6,8 @@
 
     <div :class="$style.result">当前选中: {{month}}</div>
 
-    <XDatePicker></XDatePicker>
+    <XDatePicker @toggle="toggleDate"></XDatePicker>
+    <div :class="$style.result">当前选中: {{date}}</div>
   </div>
 </template>
 <script>
@@ -17,12 +18,16 @@
       return {
         months: new Array(12).fill(0).map((v, i) => i + 1),
         monthIndex: month - 1,
-        month
+        month,
+        date: moment().format('YYYY.MM.DD')
       }
     },
     methods: {
       toggleMonth(index) {
         this.month = index + 1
+      },
+      toggleDate(date) {
+        this.date = moment(date).format('YYYY.MM.DD')
       }
     }
   }

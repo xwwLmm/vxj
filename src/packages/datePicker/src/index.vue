@@ -51,13 +51,20 @@
       toggleYear(index) {
         this.year = index
         this.day = 0
+        this.toggle()
       },
       toggleMonth(index) {
         this.month = index
         this.day = 0
+        this.toggle()
       },
       toggleDay(index) {
         this.day = index
+        this.toggle()
+      },
+      toggle() {
+        const date = [this.years[this.year], this.months[this.month], this.days[this.day]].join('-')
+        this.$emit('toggle', date)
       }
     },
     components: {

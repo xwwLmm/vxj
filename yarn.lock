@@ -4027,6 +4027,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+liyun-regions@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/liyun-regions/-/liyun-regions-1.0.1.tgz#2f9b67b1124055ce8d5c5c337444b3ff96c9a4bc"
+
 loader-fs-cache@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.1.tgz#56e0bf08bd9708b26a765b68509840c8dec9fdbc"
