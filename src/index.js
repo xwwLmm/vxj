@@ -8,6 +8,7 @@ import Tab from './packages/tab/src'
 import Carousel from './packages/carousel/src'
 import Search from './packages/search/src'
 import DateRangePicker from './packages/dateRangePicker/src'
+import PickerItem from './packages/pickerItem/src'
 
 const version = '0.1.1'
 
@@ -22,6 +23,7 @@ const install = function (Vue) {
   Vue.component(Carousel.name, Carousel)
   Vue.component(Search.name, Search)
   Vue.component(DateRangePicker.name, DateRangePicker)
+  Vue.component(PickerItem.name, PickerItem)
 }
 
 export default {
@@ -36,5 +38,6 @@ export default {
   Tab,
   Carousel,
   Search,
-  DateRangePicker
+  DateRangePicker,
+  PickerItem
 }

@@ -28,6 +28,9 @@ const router = new VueRouter({
   }, {
     path: '/date-range-picker',
     component: () => import('../views/dateRangePicker')
+  }, {
+    path: '/picker',
+    component: () => import('../views/picker')
   }]
 })
 

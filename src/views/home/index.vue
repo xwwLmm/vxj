@@ -11,6 +11,7 @@
 
     <Header>Picker</Header>
 
+    <XCell @onClick="$router.push('/picker')">picker</XCell>
     <XCell @onClick="$router.push('/date-range-picker')">dateRangePicker</XCell>
 
     <Header>Form</Header>

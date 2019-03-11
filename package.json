@@ -4,18 +4,24 @@
   "main": "lib/vxj.umd.js",
   "private": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "check": "vue-cli-service serve ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name vxj --dest lib src/index.js"
   },
-  "files": ["lib", "src/packages"],
+  "files": [
+    "lib",
+    "src/packages"
+  ],
   "dependencies": {
+    "cross-env": "^5.2.0",
     "moment": "^2.24.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.6",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vxj": "^0.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
