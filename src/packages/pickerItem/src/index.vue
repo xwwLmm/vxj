@@ -120,10 +120,13 @@
         }
 
         this.translateStartY = this.translateY = 0
+
+        this.$emit('toggle', this.currentIndex, this.values[this.currentIndex])
       },
       handleLetterClick(index) {
         if (index < this.minIndex) return
         this.currentIndex = index
+        this.$emit('toggle', this.currentIndex, this.values[this.currentIndex])
       }
     }
   }
