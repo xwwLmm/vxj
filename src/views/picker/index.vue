@@ -2,7 +2,7 @@
   <div>
     <Header :back="true">picker</Header>
 
-    <XPickerItem :values="months"></XPickerItem>
+    <XPickerItem :values="months" :min-index="4"></XPickerItem>
   </div>
 </template>
 <script>

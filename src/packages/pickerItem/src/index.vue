@@ -20,6 +20,10 @@
   export default {
     name: 'XPickerItem',
     props: {
+      defaultIndex: {
+        type: Number,
+        default: 0
+      },
       values: {
         type: Array,
         required: true,
@@ -42,11 +46,18 @@
       visibleCount: {
         type: Number,
         default: 5
+      },
+      minIndex: {
+        type: Number,
+        validator(val) {
+          return val >= 0
+        },
+        default: 0
       }
     },
     data() {
       return {
-        currentIndex: 0,
+        currentIndex: this.defaultIndex || this.minIndex,
         translateStartY: 0,
         translateY: 0
       }
@@ -95,7 +106,7 @@
         const translateY = this.translateY
         const offset = Math.round(-translateY / this.itemHeight)
         if (offset < 0) {
-          this.currentIndex = Math.max(0, this.currentIndex + offset)
+          this.currentIndex = Math.max(0, this.minIndex, this.currentIndex + offset)
         } else {
           this.currentIndex = Math.min(this.values.length - 1, this.currentIndex + offset)
         }
@@ -103,6 +114,7 @@
         this.translateStartY = this.translateY = 0
       },
       handleLetterClick(index) {
+        if (index < this.minIndex) return
         this.currentIndex = index
       }
     }
