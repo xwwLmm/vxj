@@ -5,7 +5,7 @@
     </div>
     <div :class="$style.content">
       <div>
-        <img :src="require('./assets/搜索.svg')">
+        <img src="http://www.qcbyt.me/assets/搜索.svg">
         <input v-model="searchText" type="search" :placeholder="placeholder" @focus="focus = true"/>
         <span @click="$emit('search', searchText)" v-if="focus">搜索</span>
       </div>
@@ -67,9 +67,11 @@
 
       > span
         color $theme-color
+        white-space nowrap
 
     > div:nth-child(2)
       padding 0 10px
       color $theme-color
+      white-space nowrap
 
 </style>

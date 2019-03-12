@@ -12,7 +12,11 @@ import PickerItem from './packages/pickerItem/src'
 import DatePicker from './packages/datePicker/src'
 import RegionPicker from './packages/regionPicker/src'
 
-const version = '0.1.2'
+const pkg = require('../package')
+
+const version = pkg.version
+
+console.log(version)
 
 const install = function (Vue) {
   Vue.component(Loading.name, Loading)

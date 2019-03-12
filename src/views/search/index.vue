@@ -3,8 +3,8 @@
     <Header :back="true">search</Header>
     <div style="margin-top: 10px">
       <XSearch @search="search">
-        <span style="padding-left: 10px;line-height: 30px;" slot="left">left</span>
-        <span style="padding-left: 10px;line-height: 30px;" slot="right">right</span>
+        <span style="padding-left: 10px;line-height: 30px;white-space: nowrap" slot="left">left</span>
+        <span style="padding-left: 10px;line-height: 30px;white-space: nowrap" slot="right">right</span>
       </XSearch>
     </div>
   </div>
