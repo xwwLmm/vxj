@@ -1,19 +1,26 @@
 <template>
   <div>
-    <div :class="$style.mask" v-if="showMask"></div>
-    <div :class="$style.container">
-      <div :class="$style.content">{{text}}</div>
-      <div :class="$style.footer" >
-        <span @click="$emit('close')">{{cancelText}}</span>
-        <span @click="$emit('confirm')">{{confirmText}}</span>
+    <transition name="fade">
+      <div :class="$style.mask" v-if="show && showMask"></div>
+    </transition>
+
+    <transition name="fade">
+      <div :class="$style.container" v-if="show">
+        <div :class="$style.content">{{text}}</div>
+        <div :class="$style.footer" >
+          <span @click="$emit('close')">{{cancelText}}</span>
+          <span @click="$emit('confirm')">{{confirmText}}</span>
+        </div>
       </div>
-    </div>
+    </transition>
+
   </div>
 </template>
 <script>
   export default {
     name: 'Confirm',
     props: {
+      show: Boolean,
       text: String,
       confirmText: {
         type: String,
@@ -31,6 +38,8 @@
   }
 </script>
 <style lang="stylus" module>
+  @import "../../../styles"
+
   .container
     position fixed
     left 50%

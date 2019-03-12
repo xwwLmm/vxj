@@ -1,15 +1,21 @@
 <template>
   <div>
-    <div :class="$style.mask" v-if="showMask"></div>
-    <div :class="$style.container">
-      <div :class="$style.content">{{text}}</div>
-    </div>
+    <transition name="fade">
+      <div :class="$style.mask" v-if="show && showMask"></div>
+    </transition>
+
+    <transition name="fade">
+      <div :class="$style.container" v-if="show">
+        <div :class="$style.content">{{text}}</div>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
   export default {
     name: 'Toast',
     props: {
+      show: Boolean,
       text: String,
       showMask: {
         type: Boolean,
@@ -27,6 +33,14 @@
     },
     mounted() {
       this.interval = setTimeout(() => this.$emit('close'), this.timeout)
+    },
+    watch: {
+      show(newVal) {
+        if (newVal) {
+          clearTimeout(this.interval)
+          this.interval = setTimeout(() => this.$emit('close'), this.timeout)
+        }
+      }
     },
     beforeDestroy() {
       clearTimeout(this.interval)

@@ -8,10 +8,11 @@
     </Buttons>
 
     <Alert @confirm="showAlert = false" :show="showAlert" text="你确定吗兄弟????"></Alert>
-    <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
+    <Toast text="成功啦！！" :show="showToast" @close="showToast = false"></Toast>
     <Confirm @close="showConfirm = false"
              @confirm="showConfirm = false"
-             text="你确定要这样做吗？" v-if="showConfirm"></Confirm>
+             :show="showConfirm"
+             text="你确定要这样做吗？"></Confirm>
   </div>
 </template>
 <script>
