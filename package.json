@@ -1,6 +1,6 @@
 {
   "name": "vxj",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "lib/vxj.umd.js",
   "private": false,
   "scripts": {
@@ -8,7 +8,7 @@
     "check": "vue-cli-service serve ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "cross-env NODE_TARGET=LIB vue-cli-service build --target lib --name vxj --dest lib src/index.js"
+    "lib": "vue-cli-service build --target lib --name vxj --dest lib src/index.js"
   },
   "files": [
     "lib",
@@ -22,7 +22,7 @@
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
-    "vxj": "^0.1.5"
+    "vxj": "0.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
