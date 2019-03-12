@@ -4,7 +4,7 @@
     <Buttons>
       <Button @onClick="showDateRange = true">点击弹出 date range picker</Button>
     </Buttons>
-    <XDateRangePicker @close="showDateRange = false" mode="single" v-if="showDateRange"></XDateRangePicker>
+    <XDateRangePicker @close="showDateRange = false" :show="showDateRange" mode="single"></XDateRangePicker>
   </div>
 </template>
 <script>

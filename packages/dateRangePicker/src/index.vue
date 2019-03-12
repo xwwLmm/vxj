@@ -1,37 +1,40 @@
 <template>
   <div>
-    <div :class="$style.mask"></div>
-    <div :class="$style.container">
-      <div :class="$style.title">
-        <div>
-          <span @click.stop="closeModal">取消</span>
+    <transition name="fade">
+      <div :class="$style.mask" v-if="show"></div>
+    </transition>
+    <transition name="bottom">
+      <div :class="$style.container" v-if="show">
+        <div :class="$style.title">
+          <div>
+            <span @click.stop="closeModal">取消</span>
+          </div>
+          <div :class="$style.confirm">
+            <span @click.stop="confirmModal">确定</span>
+          </div>
         </div>
-        <div :class="$style.confirm">
-          <span @click.stop="confirmModal">确定</span>
-        </div>
-      </div>
 
-      <div :class="$style.header">
-        <div :class="$style.arrow">
-          <span :class="$style.arrowAvailable" @click.stop="minusYear"> &lt; </span>
-          <span>{{year}}年</span>
-          <span :class="$style.arrowAvailable" @click.stop="addYear"> &gt; </span>
+        <div :class="$style.header">
+          <div :class="$style.arrow">
+            <span :class="$style.arrowAvailable" @click.stop="minusYear"> &lt; </span>
+            <span>{{year}}年</span>
+            <span :class="$style.arrowAvailable" @click.stop="addYear"> &gt; </span>
+          </div>
+          <div :class="$style.arrow">
+            <span :class="$style.arrowAvailable" @click.stop="minusMonth"> &lt; </span>
+            <span>{{month}}月</span>
+            <span :class="$style.arrowAvailable" @click.stop="addMonth"> &gt; </span>
+          </div>
         </div>
-        <div :class="$style.arrow">
-          <span :class="$style.arrowAvailable" @click.stop="minusMonth"> &lt; </span>
-          <span>{{month}}月</span>
-          <span :class="$style.arrowAvailable" @click.stop="addMonth"> &gt; </span>
+
+        <div :class="$style.weekText">
+          <span v-for="text in weekText" :key="text">{{text}}</span>
         </div>
-      </div>
 
-      <div :class="$style.weekText">
-        <span v-for="text in weekText" :key="text">{{text}}</span>
-      </div>
-
-      <div :class="$style.days">
-        <div v-for="left in monthLeft" :key="year + '-' + month + '-' + left">&nbsp;</div>
-        <div :class="[day.checked && (day.moment === startTime || day.moment === endTime) ? $style.terminal : '']"
-             v-for="day in days" :key="day.moment">
+        <div :class="$style.days">
+          <div v-for="left in monthLeft" :key="year + '-' + month + '-' + left">&nbsp;</div>
+          <div :class="[day.checked && (day.moment === startTime || day.moment === endTime) ? $style.terminal : '']"
+               v-for="day in days" :key="day.moment">
           <span :class="day.available ? '' : $style.unavailable"
                 :style="{backgroundColor: day.checked ? ((day.moment === startTime || day.moment === endTime) ? weightColor : lightColor) : ''}"
                 @click.stop="toggleCheck(day)">
@@ -44,13 +47,15 @@
 
           </span>
 
-          <span :style="leftPadding"
-                v-if="day.checked && day.moment === endTime && index > 0 && days[index - 1].checked"></span>
-          <span :style="rightPadding"
-                v-if="day.checked && day.moment === startTime && index < days.length - 1 && days[index + 1].checked"></span>
+            <span :style="leftPadding"
+                  v-if="day.checked && day.moment === endTime && index > 0 && days[index - 1].checked"></span>
+            <span :style="rightPadding"
+                  v-if="day.checked && day.moment === startTime && index < days.length - 1 && days[index + 1].checked"></span>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
+
   </div>
 </template>
 <script>
@@ -84,6 +89,7 @@
   export default {
     name: 'XDateRangePicker',
     props: {
+      show: Boolean,
       defaultStartTime: String,
       defaultEndTime: String,
       availableStartDate: String,
@@ -244,6 +250,8 @@
   }
 </script>
 <style lang="stylus" module>
+  @import "../../../styles"
+
   .mask
     position fixed
     top 0

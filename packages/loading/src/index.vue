@@ -1,18 +1,24 @@
 <template>
   <div>
-    <div :class="$style.mask" v-if="showMask"></div>
-    <div :class="$style.container">
-      <div :class="$style.content">
-        <div :class="$style.child" v-for="child in children" :key="child">
+    <transition name="fade">
+      <div :class="$style.mask" v-if="show && showMask"></div>
+    </transition>
+
+    <transition name="fade">
+      <div :class="$style.container" v-if="show">
+        <div :class="$style.content">
+          <div :class="$style.child" v-for="child in children" :key="child">
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 <script>
   export default {
     name: 'Loading',
     props: {
+      show: Boolean,
       showMask: {
         type: Boolean,
         default: true
@@ -26,6 +32,8 @@
   }
 </script>
 <style lang="stylus" module>
+  @import "../../../styles"
+
   .container
     position fixed
     left 50%

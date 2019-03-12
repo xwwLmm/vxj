@@ -4,7 +4,7 @@
     <Buttons>
       <Button @onClick="showLoading = true">点击展示 loading</Button>
     </Buttons>
-    <Loading :showMask="true" @click.native="showLoading = false" v-if="showLoading"></Loading>
+    <Loading :showMask="true" :show="showLoading" @click.native="showLoading = false"></Loading>
   </div>
 </template>
 <script>
