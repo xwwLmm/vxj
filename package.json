@@ -12,7 +12,7 @@
   },
   "files": [
     "lib",
-    "src/packages"
+    "packages"
   ],
   "dependencies": {
     "cross-env": "^5.2.0",
