@@ -6708,6 +6708,19 @@ vxj@0.1.7:
     vue-router "^3.0.2"
     vxj "0.1.2"
 
+vxj@0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/vxj/-/vxj-0.1.8.tgz#d7a5c529ba59b340839d855e47eb757febdd7ea6"
+  dependencies:
+    cross-env "^5.2.0"
+    liyun-regions "^1.0.1"
+    moment "^2.24.0"
+    stylus "^0.54.5"
+    stylus-loader "^3.0.2"
+    vue "^2.6.6"
+    vue-router "^3.0.2"
+    vxj "0.1.7"
+
 vxj@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/vxj/-/vxj-0.1.1.tgz#1b64e8b1d8b817c2097acc94f25c5d781db421d5"

@@ -1,8 +1,14 @@
 {
   "name": "vxj",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "lib/vxj.umd.js",
   "private": false,
+  "keywords": [
+    "vue",
+    "vue-components",
+    "mobile ui"
+  ],
+  "author": "xieww 2434885000@qq.com",
   "scripts": {
     "dev": "vue-cli-service serve",
     "check": "vue-cli-service serve ",
@@ -12,7 +18,8 @@
   },
   "files": [
     "lib",
-    "packages"
+    "packages",
+    "styles"
   ],
   "dependencies": {
     "cross-env": "^5.2.0",
@@ -22,7 +29,7 @@
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
-    "vxj": "0.1.7"
+    "vxj": "0.1.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
