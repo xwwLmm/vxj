@@ -7,7 +7,7 @@
       <Button @onClick="showConfirm = true">点击弹出 confirm</Button>
     </Buttons>
 
-    <Alert @confirm="showAlert = false" v-if="showAlert" text="你确定吗兄弟????"></Alert>
+    <Alert @confirm="showAlert = false" :show="showAlert" text="你确定吗兄弟????"></Alert>
     <Toast text="成功啦！！" v-if="showToast" @close="showToast = false"></Toast>
     <Confirm @close="showConfirm = false"
              @confirm="showConfirm = false"

@@ -1,10 +1,14 @@
 <template>
   <div>
-    <div :class="$style.mask" v-if="showMask"></div>
-    <div :class="$style.container">
-      <div :class="$style.content">{{text}}</div>
-      <div :class="$style.footer" @click="$emit('confirm')">{{confirmText}}</div>
-    </div>
+    <transition name="fade">
+      <div :class="$style.mask" v-if="show && showMask"></div>
+    </transition>
+    <transition name="fade">
+      <div :class="$style.container" v-if="show">
+        <div :class="$style.content">{{text}}</div>
+        <div :class="$style.footer" @click="$emit('confirm')">{{confirmText}}</div>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
@@ -16,6 +20,7 @@
         type: String,
         default: '确定'
       },
+      show: Boolean,
       showMask: {
         type: Boolean,
         default: true
@@ -24,6 +29,8 @@
   }
 </script>
 <style lang="stylus" module>
+  @import "../../../styles"
+
   .container
     position fixed
     left 50%
@@ -60,4 +67,5 @@
     white-space nowrap
     overflow hidden
     text-overflow ellipsis
+
 </style>

@@ -16,8 +16,6 @@ const pkg = require('../package')
 
 const version = pkg.version
 
-console.log(version)
-
 const install = function (Vue) {
   Vue.component(Loading.name, Loading)
   Vue.component(Alert.name, Alert)
