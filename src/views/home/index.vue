@@ -48,7 +48,14 @@
       <span>
         <span class="iconfont iconcarouselimage"></span>
         carousel
-      </span></XCell>
+      </span>
+    </XCell>
+    <XCell @onClick="$router.push('/qrcode')">
+      <span>
+        <span class="iconfont iconqrcode"></span>
+        qrcode
+      </span>
+    </XCell>
   </div>
 </template>
 <script>

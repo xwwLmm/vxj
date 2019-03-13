@@ -31,6 +31,9 @@ const router = new VueRouter({
   }, {
     path: '/picker',
     component: () => import('../views/picker')
+  }, {
+    path: '/qrcode',
+    component: () => import('../views/qrcode')
   }]
 })
 

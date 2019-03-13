@@ -11,6 +11,7 @@ import DateRangePicker from '../packages/dateRangePicker/src'
 import PickerItem from '../packages/pickerItem/src'
 import DatePicker from '../packages/datePicker/src'
 import RegionPicker from '../packages/regionPicker/src'
+import Qrcode from '../packages/qrcode/src'
 
 const pkg = require('../package')
 
@@ -30,6 +31,7 @@ const install = function (Vue) {
   Vue.component(PickerItem.name, PickerItem)
   Vue.component(DatePicker.name, DatePicker)
   Vue.component(RegionPicker.name, RegionPicker)
+  Vue.component(Qrcode.name, Qrcode)
 }
 
 export default {
@@ -47,5 +49,6 @@ export default {
   DateRangePicker,
   PickerItem,
   DatePicker,
-  RegionPicker
+  RegionPicker,
+  Qrcode
 }

@@ -1,6 +1,6 @@
 {
   "name": "vxj",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "lib/vxj.umd.js",
   "private": false,
   "keywords": [
@@ -25,11 +25,12 @@
     "cross-env": "^5.2.0",
     "liyun-regions": "^1.0.1",
     "moment": "^2.24.0",
+    "qrcode": "^1.3.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
-    "vxj": "0.1.8"
+    "vxj": "0.1.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
