@@ -65,5 +65,7 @@
   .container
     :global
       .iconfont
+        display inline-block
+        width 25px
         color $theme-color
 </style>
