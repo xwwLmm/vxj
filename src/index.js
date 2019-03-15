@@ -12,6 +12,7 @@ import PickerItem from '../packages/pickerItem/src'
 import DatePicker from '../packages/datePicker/src'
 import RegionPicker from '../packages/regionPicker/src'
 import Qrcode from '../packages/qrcode/src'
+import Progress from '../packages/progress/src'
 
 const pkg = require('../package')
 
@@ -32,6 +33,7 @@ const install = function (Vue) {
   Vue.component(DatePicker.name, DatePicker)
   Vue.component(RegionPicker.name, RegionPicker)
   Vue.component(Qrcode.name, Qrcode)
+  Vue.component(Progress.name, Progress)
 }
 
 export default {
@@ -50,5 +52,6 @@ export default {
   PickerItem,
   DatePicker,
   RegionPicker,
-  Qrcode
+  Qrcode,
+  Progress
 }

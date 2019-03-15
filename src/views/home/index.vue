@@ -20,7 +20,8 @@
       <span >
         <span class="iconfont iconnav-cw"></span>
         tab
-      </span></XCell>
+      </span>
+    </XCell>
 
     <Header>Picker</Header>
 
@@ -29,19 +30,28 @@
       <span>
         <span class="iconfont iconrili"></span>
         dateRangePicker
-      </span></XCell>
+      </span>
+    </XCell>
 
     <Header>Form</Header>
     <XCell @onClick="$router.push('/switch')">
       <span >
         <span class="iconfont iconswitchers"></span>
         switch
-      </span></XCell>
+      </span>
+    </XCell>
     <XCell @onClick="$router.push('/search')">
       <span>
         <span class="iconfont iconsearch"></span>
         search
-      </span></XCell>
+      </span>
+    </XCell>
+    <XCell @onClick="$router.push('/progress')">
+      <span>
+        <span class="iconfont iconprogress"></span>
+        progress
+      </span>
+    </XCell>
 
     <Header>Others</Header>
     <XCell @onClick="$router.push('/carousel')">

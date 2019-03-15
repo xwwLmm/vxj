@@ -34,6 +34,9 @@ const router = new VueRouter({
   }, {
     path: '/qrcode',
     component: () => import('../views/qrcode')
+  }, {
+    path: '/progress',
+    component: () => import('../views/progress')
   }]
 })
 
