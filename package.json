@@ -1,6 +1,6 @@
 {
   "name": "vxj",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "lib/vxj.umd.js",
   "private": false,
   "keywords": [
@@ -9,6 +9,8 @@
     "mobile ui"
   ],
   "author": "xieww 2434885000@qq.com",
+  "homepage": "https://github.com/xwwLmm/vxj",
+  "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
     "check": "vue-cli-service serve ",
