@@ -6714,6 +6714,20 @@ vue@^2.6.6:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.8.tgz#f21cbc536bfc14f7d1d792a137bb12f69e60ea91"
 
+vxj@0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/vxj/-/vxj-0.1.10.tgz#747b229a63cbdaa7d6f06a09d6b8babe6e2247c0"
+  dependencies:
+    cross-env "^5.2.0"
+    liyun-regions "^1.0.1"
+    moment "^2.24.0"
+    qrcode "^1.3.3"
+    stylus "^0.54.5"
+    stylus-loader "^3.0.2"
+    vue "^2.6.6"
+    vue-router "^3.0.2"
+    vxj "0.1.9"
+
 vxj@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/vxj/-/vxj-0.1.2.tgz#96983364abb1ab5d3bbc4cd62f14f5a959054880"
