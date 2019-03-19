@@ -1,6 +1,6 @@
 {
   "name": "vxj",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "main": "lib/vxj.umd.js",
   "private": false,
   "keywords": [
@@ -21,7 +21,8 @@
   "files": [
     "lib",
     "packages",
-    "styles"
+    "styles",
+    "src"
   ],
   "dependencies": {
     "cross-env": "^5.2.0",

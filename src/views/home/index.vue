@@ -25,7 +25,11 @@
 
     <Header>Picker</Header>
 
-    <XCell @onClick="$router.push('/picker')">picker</XCell>
+    <XCell @onClick="$router.push('/picker')">
+      <span>
+        <span class="iconfont icontubiaozhizuo-"></span>
+        picker
+      </span></XCell>
     <XCell @onClick="$router.push('/date-range-picker')">
       <span>
         <span class="iconfont iconrili"></span>
@@ -50,6 +54,12 @@
       <span>
         <span class="iconfont iconprogress"></span>
         progress
+      </span>
+    </XCell>
+    <XCell @onClick="$router.push('/number-dynamic')">
+      <span>
+        <span class="iconfont iconshuzi"></span>
+        number dynamic
       </span>
     </XCell>
 

@@ -37,6 +37,9 @@ const router = new VueRouter({
   }, {
     path: '/progress',
     component: () => import('../views/progress')
+  }, {
+    path: '/number-dynamic',
+    component: () => import('../views/numberDynamic')
   }]
 })
 

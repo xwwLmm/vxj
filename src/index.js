@@ -13,6 +13,7 @@ import DatePicker from '../packages/datePicker/src'
 import RegionPicker from '../packages/regionPicker/src'
 import Qrcode from '../packages/qrcode/src'
 import Progress from '../packages/progress/src'
+import NumberDynamic from '../packages/numberDynamic/src'
 
 const pkg = require('../package')
 
@@ -34,6 +35,7 @@ const install = function (Vue) {
   Vue.component(RegionPicker.name, RegionPicker)
   Vue.component(Qrcode.name, Qrcode)
   Vue.component(Progress.name, Progress)
+  Vue.component(NumberDynamic.name, NumberDynamic)
 }
 
 export default {
@@ -53,5 +55,6 @@ export default {
   DatePicker,
   RegionPicker,
   Qrcode,
-  Progress
+  Progress,
+  NumberDynamic
 }
