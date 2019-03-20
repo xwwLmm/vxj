@@ -12,7 +12,7 @@
   export default {
     data() {
       return {
-        switchActive: false
+        switchActive: true
       }
     }
   }

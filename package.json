@@ -1,6 +1,6 @@
 {
   "name": "vxj",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "lib/vxj.umd.js",
   "private": false,
   "keywords": [
@@ -33,7 +33,7 @@
     "stylus-loader": "^3.0.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
-    "vxj": "0.1.11"
+    "vxj": "0.1.12"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

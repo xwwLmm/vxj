@@ -1,5 +1,7 @@
 <template>
-  <span :class="[$style.container, active ? $style.active : '', disabled ? $style.disabled : '']" :style="style" @click="!disabled && $emit('toggle')">
+  <span :class="[$style.container, active ? $style.active : '', disabled ? $style.disabled : '']" @click="!disabled && $emit('toggle')" :style="style">
+    <span :class="$style.bg"></span>
+    <span></span>
   </span>
 </template>
 <script>
@@ -29,36 +31,47 @@
     margin 0
     height 20px
     background-color $disabled-color
-    border 1px solid $disabled-color
     border-radius 10px
     box-sizing border-box
-    transition border-color .3s ease, background-color .3s ease
+
+    > span:last-child
+
+      &::after
+        content ''
+        position absolute
+        left 2px
+        top 2px
+        width 16px
+        height 16px
+        background-color $light-color
+        border-radius 8px
+        transition all .3s ease
+
+  .bg
+    display inline-block
+    width 100%
+    height 100%
+    background-color $theme-color
+    border-radius 10px
+    box-sizing border-box
+    transition transform .2s ease
     transition-delay 4ms
     cursor pointer
     outline none
     overflow hidden
-
-    &::after
-      content ''
-      position absolute
-      left 1px
-      top 1px
-      width 16px
-      height 16px
-      background-color $light-color
-      border-radius 8px
-      transition all .3s ease
+    transform scale(0)
 
   .active
-    background-color $theme-color
-    border-color $theme-color
 
-    &::after
-      left 100%
-      margin-left -17px
+    > span:first-child
+      transform scale(1)
 
+    > span:last-child
+
+      &::after
+        left 100%
+        margin-left -18px
 
   .disabled
     cursor not-allowed
-
 </style>
