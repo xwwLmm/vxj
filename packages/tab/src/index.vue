@@ -7,7 +7,6 @@
                   :key="index" @tapItem="toggleItem"></TabItem>
       </ul>
     </div>
-
   </div>
 </template>
 <script>
@@ -69,6 +68,7 @@
     &::-webkit-scrollbar
       width 0
       height 0
+      display none
 
     > ul
       display flex
