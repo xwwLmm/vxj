@@ -32,7 +32,7 @@ yarn run lint
 ```
 
 ### Demo
-See [www.qcbyt.me/vxj/#/](http://www.qcbyt.me/vxj/#/).
+See [http://qcbyt.info/vxj](http://qcbyt.info/vxj/#/).
 
 ### If you have any questions
 Create issues at [github](https://github.com/xwwLmm/vxj/issues) or Call me at QQ: 2434885000
