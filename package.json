@@ -1,6 +1,6 @@
 {
   "name": "vxj",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "main": "lib/vxj.umd.js",
   "private": false,
   "keywords": [
