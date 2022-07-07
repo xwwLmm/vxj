@@ -27,7 +27,7 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "liyun-regions": "^1.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "qrcode": "^1.3.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
